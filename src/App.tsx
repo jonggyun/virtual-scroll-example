@@ -85,7 +85,7 @@ export default function App() {
         <div css={contentStyle({ itemCount, itemHeight })}>
           {currentItemList.map((item: any) => (
             <div
-              key={item.key}
+              key={JSON.stringify(item)}
               css={itemStyle({ itemHeight, index: item.key })}
             >
               <span>테스트 #{item.key}</span>
